@@ -14,5 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    $data = App\Models\Food::$foods;
+    return view('index')->with('foods',$data);
+})->name('index');
+
+
