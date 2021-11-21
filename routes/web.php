@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Food;
+use App\Http\Controllers\TestController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,9 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    $data = App\Models\Food::$foods;
-    return view('index')->with('foods',$data);
-})->name('index');
+Route::get('/', [TestController::class, 'test'] )->name('index');
+
+Route::get('/detail/{id}', [TestController::class, 'food'] )->name('detail');
+
 
 

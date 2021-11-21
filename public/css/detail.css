@@ -1,0 +1,21 @@
+body {
+    margin: 10px auto;
+    padding: 0;
+}
+
+.menu {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.harga {
+    font-size: 1rem;
+}
+
+.desc {
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.category {
+    color: gray;
+}

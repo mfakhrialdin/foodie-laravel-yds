@@ -19,7 +19,7 @@
             <div class="card">
                 <img src="{{$food['picture_url']}}">
                 <div class="card-text">
-                    <a href="/detail"><h3>{{$food['title']}}</h3></a>
+                    <a href="{{ route('detail', ['id' => $food['id']]) }}"><h3>{{$food['title']}}</h3></a>
                     <p>Rp. {{$food['base_price']}}</p>
                 </div>
             </div>

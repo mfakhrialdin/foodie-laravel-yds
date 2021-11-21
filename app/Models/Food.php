@@ -3,8 +3,12 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Food extends Model {
+
+    use HasFactory;
+
     public static $foods = 
     [
         [
@@ -72,4 +76,18 @@ class Food extends Model {
             "description" => "Cuma buat sultan, soalnya dicampurin sama emas, emas yanto (yg jual)"
         ]
     ];
+
+
+    public static function find($id) {
+        $items = Food::$foods;
+
+        foreach ($items as $item) {
+            if ($item['id'] == $id) {
+                $product = $item;
+            }
+        }
+
+        return $product;
+
+    }
 }
